@@ -1874,7 +1874,7 @@ class RestController extends \CI_Controller
         $this->response([
             $this->config->item('rest_status_field_name')  => false,
             $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_unauthorized'),
-        ], $this->response($response, 401));
+        ], self::HTTP_UNAUTHORIZED );
     }
 
     /**
